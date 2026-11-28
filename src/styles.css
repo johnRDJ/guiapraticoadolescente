@@ -783,7 +783,14 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--site-tone-16); 
   .testimonial-arrow--next { right: 4px; }
 }
 
-.offer-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 12px; padding: 10px 16px; background: var(--rose-dark); color: var(--paper); text-align: center; font-size: 12px; font-weight: 800; letter-spacing: .06em; line-height: 1.35; }
-.offer-bar__timer { display: inline-block; min-width: 62px; padding: 3px 10px; border-radius: 6px; background: var(--paper); color: var(--rose-dark); font-size: 14px; font-variant-numeric: tabular-nums; letter-spacing: .04em; }
-@media (max-width: 480px) { .offer-bar { font-size: 10.5px; padding: 8px 12px; } .offer-bar__timer { font-size: 13px; } }
+.offer-bar { display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 16px; padding: 8px 16px; background: var(--rose-dark); color: oklch(1 0 0); text-align: center; line-height: 1.2; }
+.offer-bar__lead { display: inline-flex; align-items: center; gap: 12px; min-width: 0; }
+.offer-bar__dot { width: 10px; height: 10px; flex: 0 0 auto; border-radius: 50%; background: oklch(0.72 0.14 70); box-shadow: 0 0 6px oklch(0.72 0.14 70 / .6); }
+.offer-bar__bolt { width: 16px; height: 16px; flex: 0 0 auto; color: oklch(0.85 0.17 88); }
+.offer-bar__text { font-size: 14px; font-weight: 800; letter-spacing: -.01em; white-space: nowrap; }
+.offer-bar__timer { display: inline-flex; flex: 0 0 auto; align-items: center; padding: 5px 12px; border: 1px solid oklch(1 0 0 / .14); border-radius: 6px; background: oklch(0.16 0.01 30); color: oklch(0.85 0.16 85); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: .08em; }
+.offer-bar__group { display: inline-flex; align-items: center; }
+.offer-bar__sep { margin: 0 7px; color: oklch(0.85 0.16 85 / .55); }
+@media (max-width: 480px) { .offer-bar { gap: 10px; padding: 7px 10px; } .offer-bar__lead { gap: 7px; } .offer-bar__dot { width: 8px; height: 8px; } .offer-bar__bolt { width: 14px; height: 14px; } .offer-bar__text { font-size: 12px; } .offer-bar__timer { padding: 4px 8px; font-size: 12px; letter-spacing: .04em; } .offer-bar__sep { margin: 0 4px; } }
+@media (max-width: 340px) { .offer-bar__dot { display: none; } .offer-bar__text { font-size: 11px; } }
 

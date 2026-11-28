@@ -10,10 +10,6 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  // On Netlify builds, target Netlify (functions + static files); elsewhere keep the default.
-  ...(process.env["NETLIFY"] ? { nitro: { preset: "netlify" } } : {}),
-  // On Vercel builds, target Vercel (serverless functions + static files).
-  ...(process.env["VERCEL"] ? { nitro: { preset: "vercel" } } : {}),
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
